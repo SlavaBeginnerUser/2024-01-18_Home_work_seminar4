@@ -1,0 +1,14 @@
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\bin\Debug\net8.0\Home_Work.exe
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\bin\Debug\net8.0\Home_Work.deps.json
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\bin\Debug\net8.0\Home_Work.runtimeconfig.json
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\bin\Debug\net8.0\Home_Work.dll
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\bin\Debug\net8.0\Home_Work.pdb
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\obj\Debug\net8.0\Home_Work.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\obj\Debug\net8.0\Home_Work.AssemblyInfoInputs.cache
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\obj\Debug\net8.0\Home_Work.AssemblyInfo.cs
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\obj\Debug\net8.0\Home_Work.csproj.CoreCompileInputs.cache
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\obj\Debug\net8.0\Home_Work.dll
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\obj\Debug\net8.0\refint\Home_Work.dll
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\obj\Debug\net8.0\Home_Work.pdb
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\obj\Debug\net8.0\Home_Work.genruntimeconfig.cache
+C:\Users\Вячеслав\Documents\Seminar4\Home_Work\obj\Debug\net8.0\ref\Home_Work.dll
