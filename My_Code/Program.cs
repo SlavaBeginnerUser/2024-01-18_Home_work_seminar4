@@ -890,3 +890,202 @@
 // string str = Console.ReadLine();    // ввод строки
 // string result = GetLettersFromString(str);  // вызов функции GetLettersFromString
 // Console.WriteLine(result);
+
+
+
+// // Задайте двумерный массив. 
+// // Найдите элементы, у которых оба индекса чётные, и замените эти элементы на их квадраты.
+
+// // Пример 
+// // 2 3 4 3    			4 3 16 3
+// // 4 3 4 1    => 		4 3 4  1
+// // 2 9 5 4 				4 9 25 4
+
+// // int [,] matrix = new int [rows,collums]; - создание 2х мерного массива
+// // array.Length - посчитает все подряд элементы в массиве
+// // array.GetLength(0) - посчитает все элементы в строке
+// // array.GetLength(1) - посчитает все элементы в столбце
+
+// int[,] CreateArray2D(int rows, int collums)     // функция по созданию 2D массива
+// {
+// 	int[,] array1 = new int[rows, collums];
+// 	Random rnd = new Random();
+// 	for (int i = 0; i < rows; i++)
+// 		for (int j = 0; j < collums; j++)
+// 			array1[i, j] = rnd.Next(0, 10);     // заполнение случайными значениями от 0 до 9
+// 	return array1;
+// }
+
+// void ShowArray2D(int[,] matrix)                 // функция по выводу 2D массива
+// {
+// 	for (int i = 0; i < matrix.GetLength(0); i++)
+// 	{
+// 		for (int j = 0; j < matrix.GetLength(1); j++)
+// 			Console.Write($"{matrix[i, j]} ");
+// 		Console.WriteLine();
+// 	}
+// 	Console.WriteLine();
+// }
+
+// int[,] SquareElem(int[,] firstArray)        // метод решенияя условия задачи
+// {
+// 	for (int i = 0; i < firstArray.GetLength(0); i++)
+// 	{
+// 		for (int j = 0; j < firstArray.GetLength(1); j++)
+// 		{
+// 			if (i % 2 == 0 && j % 2 == 0)
+// 			{
+// 				firstArray[i, j] *= firstArray[i, j];   // возведение в квадрат
+// 														// *= firstArray[i, j] соответствует firstArray[i, j] * firstArray[i, j]
+// 			}
+// 		}
+// 	}
+// 	return firstArray;
+// }
+
+// int[,] arrayTask1 = CreateArray2D(4, 5);    // задаем размер массива 4 строки х 5 столбцов
+// ShowArray2D(arrayTask1);
+// int[,] resultArrayTask1 = SquareElem(arrayTask1);	// создали массив который заполняется результатом 
+// // после использования функции SquareElem(arrayTask1)
+// Console.WriteLine("Результат: ");
+// ShowArray2D(resultArrayTask1);
+
+
+
+// // Задайте двумерный массив. 
+// // Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+// // Пример 
+// // 2 3 4 3    
+// // 4 3 4 1    =>  2 + 3 + 5 = 10 
+// // 2 9 5 4
+
+// int[,] CreateArray2D(int rows, int collums)     // функция по созданию 2D массива
+// {
+// 	int[,] array2 = new int[rows, collums];
+// 	Random rnd = new Random();
+// 	for (int i = 0; i < rows; i++)
+// 		for (int j = 0; j < collums; j++)
+// 			array2[i, j] = rnd.Next(0, 10);     // заполнение случайными значениями от 0 до 9
+// 	return array2;
+// }
+
+// void ShowArray2D(int[,] matrix)                 // функция по выводу 2D массива
+// {
+// 	for (int i = 0; i < matrix.GetLength(0); i++)
+// 	{
+// 		for (int j = 0; j < matrix.GetLength(1); j++)
+// 			Console.Write($"{matrix[i, j]} ");
+// 		Console.WriteLine();
+// 	}
+// 	Console.WriteLine();
+// }
+
+// int MainDiagSum(int[,] array2)          // функция по решению задачи 1й метод
+// {
+// 	int mainDiagSum = 0;
+// 	for (int i = 0; i < array2.GetLength(0); i++)
+// 	{
+// 		for (int j = 0; j < array2.GetLength(1); j++)
+// 		{
+// 			if (i == j)
+// 				mainDiagSum = mainDiagSum + array2[i, j];
+// 		}
+// 	}
+// 	return mainDiagSum;
+// }
+
+// int MainDiagSum2(int[,] array2)         // функция по решению задачи 2й метод
+// {
+// 	int mainDiagSum = 0;
+// 	if (array2.GetLength(0) <= array2.GetLength(1))
+// 	{
+// 		for (int i = 0; i < array2.GetLength(0); i++)
+// 		{
+// 			mainDiagSum += array2[i, i]; // += array2[i,i] тождественно = mainDiagSum + array2[i,i]
+// 		}
+// 	}
+// 	else
+// 	{
+// 		for (int i = 0; i < array2.GetLength(1); i++)
+// 		{
+// 			mainDiagSum += array2[i, i];
+// 		}
+// 	}
+// 	return mainDiagSum;
+// }
+
+// int[,] arrayTask2 = CreateArray2D(4, 3);    // задаем размер массива (4 строки и 3 столбца)
+// ShowArray2D(arrayTask2);                    // показываем массив
+// int sumMainDiag = MainDiagSum(arrayTask2);  // решение 1м методом
+// int sum2MainDiag = MainDiagSum2(arrayTask2);// решение 2м методом
+// Console.WriteLine($"Результат 1-го метода: {sumMainDiag} ");
+// Console.WriteLine($"Результат 2-го метода: {sum2MainDiag} ");
+
+
+
+// // Задайте двумерный массив.
+// // Сформируйте новый одномерный массив, состоящий из 
+// // средних арифметических значений по строкам двумерного массива. 
+// // Пример 
+// // 2 3 4 3   
+// // 4 3 4 1    =>  [3 3 5] 
+// // 2 9 5 4
+
+// int[,] CreateArray2D(int rows, int collums)     // функция по созданию 2D массива
+// {
+// 	int[,] array3 = new int[rows, collums];
+// 	Random rnd = new Random();
+// 	for (int i = 0; i < rows; i++)
+// 		for (int j = 0; j < collums; j++)
+// 			array3[i, j] = rnd.Next(0, 10);     // заполнение случайными значениями от 0 до 9
+// 	return array3;
+// }
+
+// void ShowArray2D(int[,] matrix)                 // функция по выводу 2D массива
+// {
+// 	for (int i = 0; i < matrix.GetLength(0); i++)
+// 	{
+// 		for (int j = 0; j < matrix.GetLength(1); j++)
+// 			Console.Write($"{matrix[i, j]} ");
+// 		Console.WriteLine();
+// 	}
+// 	Console.WriteLine();
+// }
+
+// void PrintArray(double[] massiv)       // функция по выводу 1D массива с веществ знач
+// {
+// 	for (int i = 0; i < massiv.Length; i++)
+// 	{
+// 		Console.Write($"{massiv[i]} ");
+// 		Console.WriteLine();
+// 	}
+// 	Console.WriteLine();
+// }
+
+// double[] AvgArray(int[,] array3)    // функция решения для задачи
+// {
+// 	double[] avgMeans = new double[array3.GetLength(0)];    // одномерный массив с вещественным типом данных
+// 	for (int i = 0; i < array3.GetLongLength(0); i++)
+// 	{
+// 		double currentSum = 0;
+// 		for (int j = 0; j < array3.GetLongLength(1); j++)
+// 		{
+// 			currentSum = currentSum + array3[i, j];
+// 		}
+// 		currentSum = currentSum / array3.GetLength(1);
+// 		avgMeans[i] = currentSum;
+// 	}
+// 	return avgMeans;
+// }
+
+// int[,] arrayTask3 = CreateArray2D(4, 3);    // задаем размер массива (4 строки и 3 столбца)
+// ShowArray2D(arrayTask3);                    // показываем массив
+// double[] avgMeansArr = AvgArray(arrayTask3);
+// Console.WriteLine("Результат: ");
+// PrintArray(avgMeansArr);        // вывод через функцию
+// 								// или вывод через foreach:
+// foreach (double val in avgMeansArr)
+// {
+// 	Console.Write(Math.Round(val, 3) + " "); // округление до 3го знака после запятой
+// 	Console.WriteLine();
+// }
