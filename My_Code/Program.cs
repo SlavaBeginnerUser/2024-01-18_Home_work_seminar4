@@ -1219,3 +1219,91 @@
 // 	}
 // }
 // Console.WriteLine($"{numOfMinRowSum} ");
+
+
+
+// // string elem = "Hello"; // строка = массив из букв
+// // Console.WriteLine(elem.Length); // вывод количества ячеек = длинна массива
+
+
+
+// // char[] a = {'a', 'b', 'c' }; // строка не преобразованная в однородный массив
+// // Console.WriteLine(a.Length); // вывод количества ячеек = длинна массива
+
+// // Задайте массив символов (тип char[]). Создайте строку из символов этого массива. 
+// // Указание Конструктор строки вида string(char []) не использовать. 
+// // Пример[‘a’, ‘b’, ‘c’, ‘d’] => “abcd”
+
+// // решение №1
+// // char[] a = { 'a', 'b', 'c', 'd' };
+// // Console.WriteLine(a);  
+
+// // решение №2
+// string GetStringFromChar(char[] array)  // метод создания строки из массива
+// {
+// 	string str = ""; // "" - пустая строка
+// 	foreach (char e in array)
+// 	{
+// 		str += e;
+// 	}
+// 	return str;
+// }
+// char[] str = { 'a', 'b', 'c', 'd' };
+// string res = GetStringFromChar (str);
+// Console.WriteLine((res));
+
+
+
+// // На основе символов строки (тип string) сформировать массив символов (тип char[]). 
+// // Вывести массив на экран. Указание Метод строки ToCharArray() не использовать. 
+// // Пример “Hello!” => [‘H’, ‘e’, ‘l’, ‘l’, ‘o’, ‘!’ ]
+
+// char[] StringToChars(string str) // метод преобразования строки в массив
+// {
+// 	char[] chars = new char[str.Length];
+// 	for (int i = 0; i < str.Length; i++)
+// 	{
+// 		chars[i] = str[i]; // в массив заносим значение из строки
+// 	}
+// 	return chars;
+// }
+
+// void PrintArray(char[] chr)       // функция по выводу 1D массива со строчным знач
+// {
+// 	foreach (char e in chr)
+// 	{
+// 		Console.Write(e + " ");
+// 	}
+// }
+
+// string str = "Hello!";
+// char[] chr = StringToChars(str);  // создаем массив
+// PrintArray(chr);
+
+
+
+// Считать строку с консоли, состоящую из латинских букв в нижнем регистре. 
+// // Выяснить, сколько среди введённых букв гласных. 
+// // Пример 	“hello” => 2 		“world” => 1
+
+// // string hel ="HELLO!";
+// // hel.ToLower(); // преобразование верхн региста символов в нижний
+
+// int GetVowelsFromString(string str)
+// {
+// 	int count = 0;
+// 	string vowels = "aeiouy"; // переменная vowels содержит все англ гласные в нижнем регистре
+// 	foreach (char e in str)  // проверка на наличие совпадений
+// 	{
+// 		if (vowels.Contains(e))
+// 		{
+// 			count++;
+// 		}
+// 	}
+// 	return count;
+// }
+
+// Console.Write("Введите строку: ");
+// string str = Console.ReadLine();
+// int res = GetVowelsFromString(str.ToLower());  // применяем метод, сразу переводим символы в нижний регистр
+// Console.WriteLine($"Количество глассных в строке равно: {res}");
